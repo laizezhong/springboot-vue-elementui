@@ -1,0 +1,7 @@
+server:
+  port: 8060
+spring:
+  datasource:
+    url: jdbc:mysql://193.112.112.57:3306/bootve_dev?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Lai914660773.
