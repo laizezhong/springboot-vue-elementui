@@ -1,5 +1,6 @@
 package cn.spicybar.frame.user.service;
 
+import cn.spicybar.frame.constant.SysConstant;
 import cn.spicybar.frame.role.entity.UserRole;
 import cn.spicybar.frame.role.repository.RoleRepository;
 import cn.spicybar.frame.role.repository.UserRoleRepository;
@@ -88,7 +89,7 @@ public class UserService {
         user = userRepository.save(user);
         UserRole userRole = new UserRole();
         userRole.setUserId(user.getId());
-        userRole.setRoleId(roleRepository.findByName("COMMON").getId());
+        userRole.setRoleId(roleRepository.findByName(SysConstant.ROLE_ADMIN).getId());
         userRoleRepository.save(userRole);
         re.put("status", "success");
         return re;
